@@ -2,4 +2,4 @@
 
 <h2>CartController</h2>
 
-<?= $instances['cart']->getTotal(); ?>
+<?= $instances['cart']::getTotal(); ?>
