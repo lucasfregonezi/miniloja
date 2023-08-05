@@ -4,71 +4,81 @@ namespace app\library;
 
 class Product
 {
+    private int $id;
+    private string $name;
+    private int $price;
+    private string $slug;
+    private string $image;
+    private string $description;
+    private int $quantity;
 
-  private int $id;
-  private string $name;
-  private int $price;
-  private string $slug;
-  private string $description;
-  private int $quantity;
+    public function setId(int $id)
+    {
+        $this->id = $id;
+    }
 
-  public function setId(int $id)
-  {
-    $this->id = $id;
-  }
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
 
-  public function setName(string $name)
-  {
-    $this->name = $name;
-  }
+    public function setPrice(int $price)
+    {
+        $this->price = $price;
+    }
 
-  public function setPrice(int $price)
-  {
-    $this->price = $price;
-  }
+    public function setSlug(string $slug)
+    {
+        $this->slug = $slug;
+    }
 
-  public function setSlug(string $slug)
-  {
-    $this->slug = $slug;
-  }
+    public function setImage(string $image)
+    {
+        $this->image = $image;
+    }
 
-  public function setDescription(string $description)
-  {
-    $this->description = $description;
-  }
+    public function setDescription(string $description)
+    {
+        $this->description = $description;
+    }
 
-  public function setQuantity(int $quantity)
-  {
-    $this->quantity = $quantity;
-  }
+    public function setQuantity(int $quantity)
+    {
+        $this->quantity = $quantity;
+    }
 
-  public function getId()
-  {
-    return $this->id;
-  }
+    public function getId()
+    {
+        return $this->id;
+    }
 
-  public function getName()
-  {
-    return $this->name;
-  }
+    public function getName()
+    {
+        return $this->name;
+    }
 
-  public function getPrice()
-  {
-    return $this->price;
-  }
+    public function getPrice()
+    {
+        return $this->price;
+    }
 
-  public function getSlug()
-  {
-    return $this->slug;
-  }
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 
-  public function getDescription()
-  {
-    return $this->description;
-  }
+    public function getImage()
+    {
+        return $this->image;
+    }
 
-  public function getQuantity()
-  {
-    return $this->quantity;
-  }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
 }
