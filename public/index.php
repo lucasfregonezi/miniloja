@@ -16,6 +16,7 @@ try {
     $route->add('/cart/update', 'POST', 'CartController:update');
     $route->add('/login', 'GET', 'LoginController:index');
     $route->add('/login', 'POST', 'LoginController:store');
+    $route->add('/logout', 'GET', 'LoginController:destroy');
     $route->init();
 } catch(Exception $e) {
     var_dump($e->getMessage() . ' | ' . $e->getFile() . ' | line:' . $e->getLine());

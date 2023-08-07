@@ -3,6 +3,7 @@
 namespace app\library;
 
 use Exception;
+use app\library\Auth;
 use League\Plates\Engine;
 
 class View
@@ -26,12 +27,13 @@ class View
         }
 
         self::addInstances('cart', CartInfo::class);
+        self::addInstances('auth', Auth::class);
 
         $templates = new Engine($filePath);
         $templates->addData(['instances' => self::$instances]);
 
         echo $templates->render($view, $data);
-        
+
     }
 
 }
