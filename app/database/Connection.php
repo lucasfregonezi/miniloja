@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace app\database;
 
@@ -6,14 +6,17 @@ use PDO;
 
 class Connection
 {
-
-
-    private static ? PDO $connection = null;
+    private static ?PDO $connection = null;
 
     public static function connect()
     {
+        $host = $_ENV['DATABASE_HOST'];
+        $database = $_ENV['DATABASE_NAME'];
+        $user = $_ENV['DATABASE_USER'];
+        $password = $_ENV['DATABASE_PASS'];
+
         if (!self::$connection) {
-            self::$connection = new PDO("mysql:host=localhost;dbname=miniloja","root","",[
+            self::$connection = new PDO("mysql:host={$host};dbname={$database}", "{$user}", "{$password}", [
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
             ]);
         }

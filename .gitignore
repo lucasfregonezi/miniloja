@@ -1,3 +1,4 @@
 vendor
-miniloja.sql
-composer.lock
+.env
+.sql
+.lock

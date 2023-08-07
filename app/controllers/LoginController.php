@@ -33,10 +33,8 @@ class LoginController
 
         Auth::loginAs($user);
 
-        Redirect::refresh();
-
         return Redirect::to('/');
-        // var_dump($user);
+
     }
 
     public function destroy()

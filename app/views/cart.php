@@ -74,8 +74,8 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay R$
-                            <?= number_format($instances['cart']::getTotal(), 2, ',', '.'); ?></button>
+                        <a type="button" href="/checkout" class="btn btn-warning btn-block btn-lg">Proceed to Pay R$
+                            <?= number_format($instances['cart']::getTotal(), 2, ',', '.'); ?></a>
                     </div>
                 </div>
 
