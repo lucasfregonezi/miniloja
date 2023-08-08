@@ -12,7 +12,6 @@ class LoginController
 {
     public function index()
     {
-        // var_dump(password_hash('lucas123', PASSWORD_DEFAULT));
         return View::render('login');
     }
 

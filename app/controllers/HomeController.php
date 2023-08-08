@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace app\controllers;
 
 use app\database\models\Product;
@@ -9,14 +10,11 @@ use app\library\View;
 
 class HomeController
 {
-
     public function index()
     {
-        // $users = User::all();
-        // $products = Product::all();
         $products = Product::all('id, name, slug, price, image, description');
-     
-       View::render('home',['products' => $products]);
+
+        View::render('home', ['products' => $products]);
     }
 
 }
